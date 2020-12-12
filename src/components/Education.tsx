@@ -10,7 +10,7 @@ const Education = () => {
 
   async function loadDegrees() {
     try {
-      const {data} = await Axios.get('api/degrees');
+      const {data} = await Axios.get('.netlify/functions/degrees');
       setDegrees(data);
     } catch(err) {
       console.log(err);

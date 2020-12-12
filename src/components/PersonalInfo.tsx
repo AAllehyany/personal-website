@@ -9,7 +9,7 @@ const PersonalInfo = () => {
   
   async function loadInfo() {
     try {
-      const {data} = await axios.get('api/personal-info');
+      const {data} = await axios.get('.netlify/functions/personal-info');
       setInfo(data);
     } catch(err) {
       console.log(err);

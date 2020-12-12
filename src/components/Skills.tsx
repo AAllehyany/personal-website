@@ -8,7 +8,7 @@ const Skills = () => {
 
   async function loadSkills() {
     try {
-      const {data} = await Axios.get('api/skills');
+      const {data} = await Axios.get('.netlify/functions/skills');
       setSkills(data);
     } catch(err) {
       console.log(err)

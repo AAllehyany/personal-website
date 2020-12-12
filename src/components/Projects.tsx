@@ -10,7 +10,7 @@ const Projects = () => {
 
   async function loadProjects() {
     try {
-      const {data} = await Axios.get('api/projects');
+      const {data} = await Axios.get('.netlify/functions/projects');
       setProjects(data);
     } catch(err) {
       console.log(err);
