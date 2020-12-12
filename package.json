@@ -6,13 +6,28 @@
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.1.2",
     "@testing-library/user-event": "^12.2.2",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^14.14.7",
+    "@types/react": "^16.9.56",
+    "@types/react-dom": "^16.9.9",
+    "axios": "^0.21.0",
+    "cheerio": "^1.0.0-rc.3",
+    "dotenv": "^8.2.0",
+    "faunadb": "^4.0.0",
+    "firebase": "^8.1.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
+    "typescript": "^4.0.5",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "build:tailwind": "tailwindcss build src/tailwind.css -o src/tailwind.output.css",
+    "watch:tailwind": "postcss src/tailwind.css -o src/tailwind.output.css -w",
+    "prqestart": "npm run watch:tailwind",
+    "prebuild": "npm run build:tailwind",
+    "start": "concurrently \"npm:watch:tailwind\" \"react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -34,5 +49,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-router-dom": "^5.1.6",
+    "autoprefixer": "^9.8.6",
+    "concurrently": "^5.3.0",
+    "postcss-cli": "^8.2.0",
+    "tailwindcss": "^1.9.6"
   }
 }

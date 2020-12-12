@@ -1,0 +1,32 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer components {
+    .light-attack-gbvs {
+        @apply bg-pink-400 shadow-sm text-white text-base font-bold;
+    }
+
+    .medium-attack-gbvs {
+        @apply bg-green-400 shadow-sm text-white text-base font-bold;
+    }
+
+    .heavy-attack-gbvs {
+        @apply bg-red-400 shadow-sm text-white text-base font-bold;
+    }
+
+    .unique-attack-gbvs {
+        @apply bg-blue-400 shadow-sm text-white text-base font-bold;
+    }
+
+    .corner {
+        @apply bg-red-800 text-white;
+    }
+
+    .anywhere {
+        @apply bg-green-600 text-white;
+    }
+
+}
